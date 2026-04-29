@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LLM Response Evaluator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>LLM Response Evaluator 🚀</h1>
+
+    <label>Enter Prompt:</label>
+    <textarea id="prompt" placeholder="Type your question..."></textarea>
+
+    <button onclick="generateResponse()">Generate Response</button>
+
+    <div id="responseBox" class="hidden">
+        <h3>AI Response:</h3>
+        <p id="responseText"></p>
+
+        <p id="hintText"></p>
+
+        <h3>User Evaluation (Human Feedback):</h3>
+
+        <label>Accuracy:</label>
+        <select id="accuracy">
+            <option>Good</option>
+            <option>Bad</option>
+        </select>
+
+        <label>Relevance:</label>
+        <select id="relevance">
+            <option>Good</option>
+            <option>Bad</option>
+        </select>
+
+        <label>Coherence:</label>
+        <select id="coherence">
+            <option>Good</option>
+            <option>Bad</option>
+        </select>
+
+        <label>Reason:</label>
+        <textarea id="reason" placeholder="Why did you choose this evaluation?"></textarea>
+
+        <button onclick="submitEvaluation()">Submit Evaluation</button>
+        <button onclick="viewHistory()">View Past Evaluations</button>
+    </div>
+
+    <div id="result" class="hidden"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
